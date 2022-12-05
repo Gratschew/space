@@ -6,20 +6,23 @@ source: https://sketchfab.com/3d-models/mew-pokemon-4c9dfbb590744368a05f1bed1fbf
 title: Mew Pokémon
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/mew.gltf')
+  const { nodes, materials } = useGLTF("/space/mew.gltf");
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group position={[-32.25, -63.75, -29.64]}>
-          <mesh geometry={nodes.Object_2.geometry} material={materials.wire_228153184} />
+          <mesh
+            geometry={nodes.Object_2.geometry}
+            material={materials.wire_228153184}
+          />
         </group>
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/mew.gltf')
+useGLTF.preload("/mew.gltf");
