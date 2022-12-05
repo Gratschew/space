@@ -45,87 +45,79 @@ const App = () => {
     <div className="App" style={{ height: "100vh" }} width="100%" height="100%">
       <div
         style={{
-          position: "absolute",
-          top: "80%",
-          left: "15%",
-          zIndex: 99,
-          color: "white",
-        }}
-        onClick={() => {
-          setShowPlanet("MEW");
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-around",
+          paddingTop: 20,
+          paddingBottom: 20,
         }}
       >
-        Mew
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          top: "80%",
-          left: "30%",
-          zIndex: 99,
-          color: "white",
-        }}
-        onClick={() => {
-          setShowPlanet("THANOS");
-        }}
-      >
-        Thanos, 4K might lag
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          top: "80%",
-          left: "45%",
-          zIndex: 99,
-          color: "white",
-        }}
-        onClick={() => {
-          setShowPlanet("RINNEGAN");
-        }}
-      >
-        Rinnegan
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          top: "80%",
-          left: "60%",
-          zIndex: 99,
-          color: "white",
-        }}
-        onClick={() => {
-          setShowPlanet("EARTH");
-        }}
-      >
-        Earth
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          top: "80%",
-          left: "75%",
-          zIndex: 99,
-          color: "white",
-        }}
-        onClick={() => {
-          setShowPlanet("MOON");
-        }}
-      >
-        Moon
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          top: "80%",
-          left: "90%",
-          zIndex: 99,
-          color: "white",
-        }}
-        onClick={() => {
-          setShowPlanet("SUN");
-        }}
-      >
-        Sun
+        <div
+          style={{
+            color: "white",
+            fontSize: 20,
+          }}
+          onClick={() => {
+            setShowPlanet("MEW");
+          }}
+        >
+          Mew
+        </div>
+        <div
+          style={{
+            color: "white",
+            fontSize: 20,
+          }}
+          onClick={() => {
+            setShowPlanet("THANOS");
+          }}
+        >
+          Thanos
+        </div>
+        <div
+          style={{
+            color: "white",
+            fontSize: 20,
+          }}
+          onClick={() => {
+            setShowPlanet("RINNEGAN");
+          }}
+        >
+          Rinnegan
+        </div>
+        <div
+          style={{
+            color: "white",
+            fontSize: 20,
+          }}
+          onClick={() => {
+            setShowPlanet("EARTH");
+          }}
+        >
+          Earth
+        </div>
+        <div
+          style={{
+            color: "white",
+            fontSize: 20,
+          }}
+          onClick={() => {
+            setShowPlanet("MOON");
+          }}
+        >
+          Moon
+        </div>
+        <div
+          style={{
+            color: "white",
+            fontSize: 20,
+          }}
+          onClick={() => {
+            setShowPlanet("SUN");
+          }}
+        >
+          Sun
+        </div>
       </div>
       <Canvas>
         <Suspense fallback={<Loader />}>
