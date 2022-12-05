@@ -6,34 +6,66 @@ source: https://sketchfab.com/3d-models/rinnegan-naruto-f4ca72e28da24adc961842ad
 title: Rinnegan (Naruto)
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/rinnegan.gltf')
+  const { nodes, materials } = useGLTF("/space/rinnegan.gltf");
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
-          <group position={[-0.17, -1.59, -0.51]} rotation={[-Math.PI / 2, 0, 0]}>
-            <mesh geometry={nodes['Head_02_-_Default_0'].geometry} material={materials['02_-_Default']} />
-            <mesh geometry={nodes['Head_07_-_Default_0'].geometry} material={materials['07_-_Default']} />
+          <group
+            position={[-0.17, -1.59, -0.51]}
+            rotation={[-Math.PI / 2, 0, 0]}
+          >
+            <mesh
+              geometry={nodes["Head_02_-_Default_0"].geometry}
+              material={materials["02_-_Default"]}
+            />
+            <mesh
+              geometry={nodes["Head_07_-_Default_0"].geometry}
+              material={materials["07_-_Default"]}
+            />
           </group>
-          <group position={[-0.1, 123.27, -0.49]} rotation={[-Math.PI / 2, 0, 0]} scale={1.13}>
-            <mesh geometry={nodes['Head_Band_03_-_Default_0'].geometry} material={materials['03_-_Default']} />
-            <mesh geometry={nodes['Head_Band_01_-_Default_0'].geometry} material={materials['01_-_Default']} />
-            <mesh geometry={nodes['Head_Band_08_-_Default_0'].geometry} material={materials['08_-_Default']} />
+          <group
+            position={[-0.1, 123.27, -0.49]}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={1.13}
+          >
+            <mesh
+              geometry={nodes["Head_Band_03_-_Default_0"].geometry}
+              material={materials["03_-_Default"]}
+            />
+            <mesh
+              geometry={nodes["Head_Band_01_-_Default_0"].geometry}
+              material={materials["01_-_Default"]}
+            />
+            <mesh
+              geometry={nodes["Head_Band_08_-_Default_0"].geometry}
+              material={materials["08_-_Default"]}
+            />
           </group>
-          <group position={[-0.55, 104.42, 157.73]} rotation={[Math.PI / 2, 0, 0]}>
+          <group
+            position={[-0.55, 104.42, 157.73]}
+            rotation={[Math.PI / 2, 0, 0]}
+          >
             <group rotation={[Math.PI / 2, 0, 0]} />
           </group>
-          <group position={[-0.17, 126.35, -0.51]} rotation={[-Math.PI / 2, 0, 0]} scale={[1.08, 1.08, 1.31]}>
-            <mesh geometry={nodes['Hair_09_-_Default_0'].geometry} material={materials['09_-_Default']} />
+          <group
+            position={[-0.17, 126.35, -0.51]}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={[1.08, 1.08, 1.31]}
+          >
+            <mesh
+              geometry={nodes["Hair_09_-_Default_0"].geometry}
+              material={materials["09_-_Default"]}
+            />
           </group>
         </group>
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/rinnegan.gltf')
+useGLTF.preload("/rinnegan.gltf");
